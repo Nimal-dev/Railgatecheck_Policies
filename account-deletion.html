@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gate Track - Account & Data Deletion</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        :root {
+            --primary: #1A73E8;
+            --danger: #EA4335;
+            --text-dark: #202124;
+            --text-muted: #5F6368;
+            --bg-light: #F8F9FA;
+            --card-bg: #FFFFFF;
+            --border: #DADCE0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+        header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        header img {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 0;
+            color: var(--text-dark);
+        }
+        h2 {
+            font-size: 18px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        p, li {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+        .highlight-box {
+            background-color: #FEF7F0;
+            border-left: 4px solid var(--danger);
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: #B06000;
+            font-weight: 500;
+        }
+        .steps {
+            background: #F1F3F4;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .steps ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .steps li {
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="icon.png" alt="Gate Track App Icon">
+            <div>
+                <h1>Gate Track</h1>
+                <p style="margin: 4px 0 0 0; color: var(--text-muted); font-size: 14px;">User Account & Data Deletion Request</p>
+            </div>
+        </header>
+
+        <section>
+            <h2>Overview of Account Deletion & Privacy</h2>
+            <p>Gate Track is designed as a privacy-first, community-driven railway gate status tracking application. The application does not require users to create an account using passwords or email addresses. Instead, client installations interact with the system using pseudonymous, cryptographically hashed client tokens.</p>
+            <p>Users have the right at any time to permanently purge their client identifiers, revoke active sessions, delete user-submitted reports, and erase all locally cached railway information.</p>
+
+            <h2>Option 1: In-App Instant Deletion (Recommended)</h2>
+            <p>You can permanently delete your client account and all device-associated data instantly within the mobile app:</p>
+            <div class="steps">
+                <ol>
+                    <li>Open the <strong>Gate Track</strong> mobile application on your device.</li>
+                    <li>Navigate to the <strong>Settings</strong> screen (gear icon in the top/bottom bar).</li>
+                    <li>Scroll down to the <strong>Community & Legal</strong> section.</li>
+                    <li>Tap on <strong>Delete Account & Stored Data</strong>.</li>
+                    <li>Review the confirmation dialog detailing the data removal.</li>
+                    <li>Tap <strong>Delete Everything</strong> to execute the permanent purge.</li>
+                </ol>
+            </div>
+            <p>Once initiated, the app immediately revokes all authentication tokens on the server, deletes active transit tracking sessions, clears push notification tokens, wipes the local encrypted database (SQLCipher), and resets the app to a clean state.</p>
+
+            <h2>Option 2: External Deletion Request (Web / Email)</h2>
+            <p>If you have already uninstalled the application or cannot access your mobile device, you can submit a deletion request directly to our developer team:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:railgatecheck@gmail.com?subject=Gate%20Track%20Account%20and%20Data%20Deletion%20Request">railgatecheck@gmail.com</a></li>
+                <li><strong>Subject:</strong> <code>Gate Track Account and Data Deletion Request</code></li>
+                <li><strong>Required Details:</strong> If known, provide your anonymous Client Public ID (visible in Settings -> Account or prior crash logs) or your Firebase Cloud Messaging (FCM) registration token.</li>
+            </ul>
+            <p>External deletion requests are verified and processed within <strong>7 business days</strong>.</p>
+
+            <h2>Data Retention & Exceptions</h2>
+            <div class="highlight-box">
+                <p><strong>Public Safety Notice:</strong> When an account is deleted, personal linkages and user identifiers are permanently scrubbed from historical crossing status logs. Anonymized aggregate status indicators (e.g., historical record that Gate #42 was observed closed at 14:00) are retained strictly to preserve railway safety consensus models and train arrival prediction algorithms.</p>
+            </div>
+
+            <h2>Summary of Deletion Actions</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px;">
+                <thead>
+                    <tr style="background-color: #F1F3F4; text-align: left;">
+                        <th style="padding: 10px; border: 1px solid var(--border);">Data Category</th>
+                        <th style="padding: 10px; border: 1px solid var(--border);">Action Taken Upon Deletion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid var(--border);"><strong>Client Tokens & HMAC Keys</strong></td>
+                        <td style="padding: 10px; border: 1px solid var(--border);">Permanently revoked and cleared from device storage and server state.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid var(--border);"><strong>Active Transit Sessions</strong></td>
+                        <td style="padding: 10px; border: 1px solid var(--border);">Immediately terminated and associated GPS observations deleted.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid var(--border);"><strong>Gate Issue Reports & Feedback</strong></td>
+                        <td style="padding: 10px; border: 1px solid var(--border);">Permanently purged from administrative records.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid var(--border);"><strong>Report Photos & Support Chat Images</strong></td>
+                        <td style="padding: 10px; border: 1px solid var(--border);">Permanently deleted, including the stored copies in the private Discord channels.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid var(--border);"><strong>Push Notification Subscriptions</strong></td>
+                        <td style="padding: 10px; border: 1px solid var(--border);">Unsubscribed and device token associations deleted.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid var(--border);"><strong>Local Offline Cache (SQLCipher)</strong></td>
+                        <td style="padding: 10px; border: 1px solid var(--border);">All cached gates, tracks, and pending reports erased immediately on device.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Gate Track. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
