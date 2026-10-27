@@ -649,6 +649,7 @@
                     <li>The pages of the Application that you visit, the time and date of your visit, and the time spent on those pages.</li>
                     <li>The overall time spent active within the Application.</li>
                     <li>The specific mobile operating system currently running on your device.</li>
+                    <li>A one-way hash of your device's Android ID, used only to prevent fraud and abuse (see "Abuse Prevention and Account Restrictions" below).</li>
                 </ul>
                 <p>It also stores what you choose to send: gate status reports, gate issue reports, support messages, and the photos and images described below.</p>
 
@@ -682,6 +683,16 @@
                     <li><strong>Where they are stored:</strong> in private Discord channels (Discord Inc., United States) that only the Service Provider can access, together with the report or message details they belong to and your pseudonymous user ID. They are sent over encrypted connections.</li>
                     <li><strong>How long they are kept:</strong> 180 days after you send them, after which they are deleted automatically. They are deleted sooner if you delete your account in the Application, or if the support chat they belong to is deleted.</li>
                     <li><strong>Please avoid</strong> photographing people's faces or vehicle number plates. The Service Provider may delete any image that is not needed for the report or support request.</li>
+                </ul>
+
+                <h2>Abuse Prevention and Account Restrictions</h2>
+                <p>To stop spam and abuse of gate reports, gate suggestions, feedback and the support chat, the Application and the Service Provider's server use the following. None of it is used for advertising, sold, or shared with anyone else.</p>
+                <ul>
+                    <li><strong>Device identifier:</strong> when the Application starts its session or is opened, it sends a one-way hash of your device's Android ID, made on your device (the Android ID itself never leaves your phone). The server hashes that value again with a secret key and keeps only the result, linked to your pseudonymous app account. It is used only for fraud prevention and security: usage limits and restrictions still apply after the Application is reinstalled or its data is cleared. It is kept while you use the Application and deleted when you delete your account, except while your account or device is restricted (see below).</li>
+                    <li><strong>Usage limits:</strong> some features have limits, for example one feedback a day, a short wait between gate suggestions, one open support chat at a time, and daily caps on reports and images. To apply them, the server records when you used each feature, under your app account ID and the device hash. These records hold no content and expire on their own within 2 days, except the open-chat record, which lasts until that chat ends. Deleting your account does not remove them early.</li>
+                    <li><strong>Restrictions:</strong> if an account is used for spam or abuse, the Service Provider may restrict it. While it is restricted, gate reports, gate suggestions and feedback are paused, and the support chat too if the Service Provider decides so; otherwise you can still contact support, for example to appeal (the map and your existing chats can always be viewed). Automatic gate crossing and train position updates from it are not used. The Application shows the reason and the end date, or that it lasts until the Service Provider lifts it. A restriction covers the devices the account was used on, so a new app account started on one of those devices (for example after a reinstall) is restricted too and linked to it.</li>
+                    <li><strong>Restriction records:</strong> a restriction record holds the reason, who made it and when, its end date, the hashed device identifiers and the app account IDs seen on those devices. After it is lifted or ends, it is kept as a record of the decision until you delete your account. If you delete your account while it is restricted, the restriction record and the link between your account ID and its devices are kept, so the restriction still applies if the Application is reinstalled. They are not deleted automatically when that restriction later ends; you can ask the Service Provider to delete them after it has ended.</li>
+                    <li><strong>Activity while restricted:</strong> only while your account is restricted, the Application sends the server a short record of what you do in it: the Application opened or resumed, the screen viewed, a gate or support chat opened (with its ID), the restriction notice shown, and attempts to use a paused feature. The server also records each refused attempt (the feature and the request path). Each record has a time and, when available, the device hash. They never include your location or the text of messages, and do not depend on the crash reports and usage statistics switch. They are used only so the Service Provider can review the restriction, are kept for 90 days (also after the restriction ends), and are deleted sooner when you delete your account.</li>
                 </ul>
 
                 <h2>Your Data Principal Rights (DPDPA 2023 & GDPR)</h2>
@@ -738,6 +749,7 @@
                     <li><strong>Automatically Collected Data:</strong> Retained for up to 24 months from collection, unless longer retention is required for legal compliance.</li>
                     <li><strong>Crash Reports and Usage Statistics:</strong> Crash reports are kept for 90 days and usage statistics for 2 months (see "Crash Reports and Usage Statistics" above).</li>
                     <li><strong>Photos and Images:</strong> Report photos and support chat images are deleted 180 days after they are sent, or sooner when you delete your account (see "Photos and Images You Send" above).</li>
+                    <li><strong>Abuse Prevention Data:</strong> The device hash is kept until you delete your account. Usage limit records expire within 2 days (the open-chat record when the chat ends). Activity recorded while restricted is kept for 90 days. Restriction records, and the device links they rely on, are kept as described in "Abuse Prevention and Account Restrictions" above, including after account deletion while a restriction is active.</li>
                     <li><strong>Aggregated and Anonymized Data:</strong> Retained indefinitely as it no longer identifies you personally.</li>
                     <li><strong>Data required for legal compliance:</strong> Retained as long as required by applicable law.</li>
                 </ul>
@@ -756,7 +768,7 @@
                 <h2>Changes</h2>
                 <p>The Service Provider may update this Privacy Policy from time to time. The Service Provider will notify you of material changes by posting the updated Privacy Policy with an effective date. Where required by law, the Service Provider will seek your consent to material changes before they take effect.</p>
                 <p>Previous versions of this Privacy Policy will be maintained and made available upon request by contacting the Service Provider at <a href="mailto:railgatecheck@gmail.com">railgatecheck@gmail.com</a>.</p>
-                <p>This privacy policy is effective as of <strong>2026-10-25</strong>.</p>
+                <p>This privacy policy is effective as of <strong>2026-10-27</strong>.</p>
 
                 <h2>Your Consent</h2>
                 <p>Where processing is based on consent, you provide that consent by affirmatively opting in to the relevant feature or action. You may withdraw consent at any time without affecting processing carried out before withdrawal. Processing based on other lawful bases is carried out as described above.</p>

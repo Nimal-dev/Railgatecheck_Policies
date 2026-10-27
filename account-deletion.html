@@ -146,6 +146,10 @@
                 <p><strong>Public Safety Notice:</strong> When an account is deleted, personal linkages and user identifiers are permanently scrubbed from historical crossing status logs. Anonymized aggregate status indicators (e.g., historical record that Gate #42 was observed closed at 14:00) are retained strictly to preserve railway safety consensus models and train arrival prediction algorithms.</p>
             </div>
 
+            <div class="highlight-box">
+                <p><strong>Abuse Prevention Exception:</strong> If your account is restricted for spam or abuse when you delete it, the restriction record and the link between your account ID and the hashed identifiers of the devices it covers are kept, so the restriction still applies if the app is reinstalled. They are not deleted automatically when the restriction later ends; you can email us to have them deleted after it has ended. Usage limit records (an account ID or device hash and a time, no content) are not removed early and expire on their own within 2 days.</p>
+            </div>
+
             <h2>Summary of Deletion Actions</h2>
             <table style="width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px;">
                 <thead>
@@ -170,6 +174,10 @@
                     <tr>
                         <td style="padding: 10px; border: 1px solid var(--border);"><strong>Report Photos & Support Chat Images</strong></td>
                         <td style="padding: 10px; border: 1px solid var(--border);">Permanently deleted, including the stored copies in the private Discord channels.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid var(--border);"><strong>Device Hash & Activity While Restricted</strong></td>
+                        <td style="padding: 10px; border: 1px solid var(--border);">Activity recorded while the account was restricted is deleted. The hashed device identifier is deleted too, except while a restriction is active (see above).</td>
                     </tr>
                     <tr>
                         <td style="padding: 10px; border: 1px solid var(--border);"><strong>Push Notification Subscriptions</strong></td>
